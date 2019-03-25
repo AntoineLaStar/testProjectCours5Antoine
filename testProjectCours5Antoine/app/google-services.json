@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "651461666340",
+    "firebase_url": "https://testprojectcours5antoine.firebaseio.com",
+    "project_id": "testprojectcours5antoine",
+    "storage_bucket": "testprojectcours5antoine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651461666340:android:de6d6c464b90ed12",
+        "android_client_info": {
+          "package_name": "com.example.a533.testprojectcours5antoine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651461666340-91ab1274vpk06o69i1p10bbqiv8v8gq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a533.testprojectcours5antoine",
+            "certificate_hash": "5469e36528087c8b25fd46cf8f0bc1fbca8c39f0"
+          }
+        },
+        {
+          "client_id": "651461666340-fgvfscfnumuhv38q4fc9ebeiuo0s2e6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb-CCoqhvma09ZqYePkchc1g5S4fPVUcM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651461666340-fgvfscfnumuhv38q4fc9ebeiuo0s2e6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
