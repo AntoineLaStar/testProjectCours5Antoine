@@ -38,6 +38,7 @@ public class NotificationService extends Service {
     public void createNotificationChannel() {
         createNotificationChannelService();
         createNotificationChannelMessage();
+        createNotificationChannelServiceImportant();
     }
 
     private void createNotificationChannelService(){
@@ -52,6 +53,21 @@ public class NotificationService extends Service {
             notificationManager.createNotificationChannel(channel);
         }
     }
+
+    private void createNotificationChannelServiceImportant(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            String channelId= "43";
+            CharSequence channelName = "NotificationMessage";
+            String channelDescription = "Notification de message";
+            int channelImportance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel= new NotificationChannel(channelId, channelName,channelImportance);
+            channel.setDescription(channelDescription);
+            notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
+
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -73,6 +89,7 @@ public class NotificationService extends Service {
                                 @javax.annotation.Nullable FirebaseFirestoreException e) {
                 for(QueryDocumentSnapshot documentMessage : queryDocumentSnapshots){
                     MessageModel messageModel = documentMessage.toObject(MessageModel.class);
+                    sendNotificationForMessage(messageModel);
                 }
             }
         });
